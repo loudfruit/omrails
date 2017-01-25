@@ -1,15 +1,24 @@
 <title>Loudfruit</title>
 <div class="jumbotron center">
-		<h1><b>Create Your Own Team Portal for Your Next Workshop in 5 Minutes Or Less</b></h1><br>
-		<h2>Get ready to impress your boss, team and clients!</h2>
-		<div class="container left">		
-			<ul>
-				<li>Need a fun way to engage your team or clients before you meet?</li>
-				<li>Thinking of how to create real time anonymous polls or feedback for your team?</li>
-				<li>Want to create an experience with the potential to <b>open doors for your career?</b></li>
-				<li>Wondering how you can achieve more by doing less, but better?</li>
-			</ul>
-		</div>
-		<h3>Are you ready to stand out from the crowd?</h3> <a href="https://loudfruit.com" class="btn btn-primary btn-lg" >Hell Yeah! >></a>
-		 <a href="https://www.facebook.com" class="btn btn-info btn-lg" >Nope</a></h3>
+	<div class="container">
+		<% if user_signed_in? %>
+			<h1>Welcome back!</h1>
+		<% else %>
+			<h1><b>Create Your Own Team Portal for Your Next Workshop in 5 Minutes Or Less</b></h1><br>
+			<h2>Get ready to impress your boss, team and clients!</h2>
+			<div class="container left">		
+				<ul>
+					<li>Need a fun way to engage your team or clients before you meet?</li>
+					<li>Thinking of how to create real time anonymous polls or feedback for your team?</li>
+					<li>Want to create an experience with the potential to <b>open doors for your career?</b></li>
+					<li>Wondering how you can achieve more by doing less, but better?</li>
+				</ul>
+			</div>
+			<h3>Are you ready to stand out from the crowd?</h3> <!-- <a href="https://loudfruit.com" class="btn btn-primary btn-lg" >Hell Yeah! >></a> -->
+				<%= link_to "Hell Yeah! >>>", new_user_session_path, class: "btn btn-primary btn-lg" %>
+				<a href="https://www.facebook.com" class="btn btn-info btn-lg" >Nope</a></h3>
+		<% end %>
+	</div>
 </div>
+
+

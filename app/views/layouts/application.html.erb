@@ -13,9 +13,28 @@
 
   <body>
 
+    <!--  Navigation Bar -->
   	<%= render "layouts/header" %>
+
+    <!-- Flash Messages  -->
+    <% flash.each do |name, message| %>
+      <%= content_tag(:div, message, class: "alert alert-info #{name}") %>
+    <% end %>
+
+    <!--  Page Content -->
     <div class="container">
     	<%= yield %>
     </div>
+
+        <!-- Footer -->
+    <footer class="small text-muted">
+      <div class="container">
+        <hr>
+        <center>
+          <p>© 2017 Loudfruit</p>
+        </center>
+      </div>
+    </footer>
+
   </body>
 </html>

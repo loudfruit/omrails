@@ -2,26 +2,9 @@
 
 @import "bootstrap";
 
+
 @import "pages";
 
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather:400,700');
-
-
-$body-bg:								#ecf0f1;
-$headings-font-family:					'Lato', 'Merriweather', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family-sans-serif:				'Merriweather', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$navbar-inverse-bg:						#ecf0f1;
-$navbar-inverse-border:					#ecf0f1;
-$navbar-inverse-link-hover-color:		#2c3e50;
-$navbar-inverse-brand-hover-color:		#2c3e50;
-$navbar-inverse-link-color: 			#7f8c8d;
-$navbar-inverse-toggle-border-color:	#7f8c8d;
-$navbar-inverse-toggle-icon-bar-bg:		#7f8c8d;
-$jumbotron-bg: 							#ecf0f1;
-$jumbotron-font-size:					120%;
-$btn-primary: 							#e67e22;
-$jumbotron-padding:						40px;
-$navbar-height:							45px;
 
 body {
     padding-top: 5rem;
