@@ -1,4 +1,9 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
+
+@import "bootstrap";
+
+@import "pages";
+
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather:400,700');
 
 
@@ -14,12 +19,13 @@ $navbar-inverse-toggle-border-color:	#7f8c8d;
 $navbar-inverse-toggle-icon-bar-bg:		#7f8c8d;
 $jumbotron-bg: 							#ecf0f1;
 $jumbotron-font-size:					120%;
-$btn-primary-bg: 						#e67e22;
+$btn-primary: 							#e67e22;
 $jumbotron-padding:						40px;
 $navbar-height:							45px;
 
-@import "bootstrap";
-
+body {
+    padding-top: 5rem;
+}
 
 .center {
 	text-align: center;

@@ -22,16 +22,12 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'devise', '~> 4.2.0'
 
 group :development, :test do
+  gem 'byebug', platform: :mri
   gem 'sqlite3'
 end
 
 group :production do
   gem 'pg'
-end
-
-
-group :development, :test do
-  gem 'byebug', platform: :mri
 end
 
 group :development do
