@@ -3,18 +3,98 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather:400,700');
 
-$body-bg:								#ecf0f1;
-$headings-font-family:					'Lato', 'Merriweather', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family-sans-serif:				'Merriweather', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$navbar-inverse-bg:						#ecf0f1;
-$navbar-inverse-border:					#ecf0f1;
-$navbar-inverse-link-hover-color:		#2c3e50;
-$navbar-inverse-brand-hover-color:		#2c3e50;
-$navbar-inverse-link-color: 			#7f8c8d;
-$navbar-inverse-toggle-border-color:	#7f8c8d;
-$navbar-inverse-toggle-icon-bar-bg:		#7f8c8d;
-$jumbotron-bg: 							#ecf0f1;
-$jumbotron-font-size:					120%;
-$btn-primary: 							#e67e22;
-$jumbotron-padding:						40px;
-$navbar-height:							45px;
+// $body-bg:								#ecf0f1;
+// $headings-font-family:					'Lato', 'Merriweather', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+// $font-family-sans-serif:				'Merriweather', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+// $navbar-inverse-bg:						#ecf0f1;
+// $navbar-inverse-border:					#ecf0f1;
+// $navbar-inverse-link-hover-color:		#2c3e50;
+// // $navbar-inverse-brand-hover-color:		#2c3e50;
+// $navbar-inverse-link-color: 			#7f8c8d;
+// $navbar-inverse-toggle-border-color:	#7f8c8d;
+// $navbar-inverse-toggle-icon-bar-bg:		#7f8c8d;
+// $jumbotron-bg: 							#ecf0f1;
+// $jumbotron-font-size:					120%;
+// $btn-primary: 							#e67e22;
+// $jumbotron-padding:						40px;
+					
+
+
+body {
+    padding-top: 		5rem;
+    background-color: 	#ecf0f1;
+    font-family:		'Lato', 'Merriweather', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+	font-family:		'Merriweather', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h2 {
+	font-family:		'Merriweather', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.center {
+	text-align: 		center;
+}
+
+.left {
+	text-align: 		left;
+	padding-left: 		15%;
+	padding-right: 		15%;
+	padding-bottom:		0%;
+	font-size:			110%;
+
+}
+
+.btn-primary {
+	background-color: 	#e67e22;
+	border-color: 		#e67e22;
+}
+
+// .btn-info {
+// 	background-color:	default;
+// 	border-color: 		default;
+// }
+
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: 				#fff;
+    background-color:	#d35400;
+    border-color: 		#d35400; /*set the color you want here*/
+}
+
+.navbar-brand:hover, .navbar-brand:focus, .navbar-brand:active, .navbar-brand.active, .open>.dropdown-toggle.navbar-brand {
+    color: 				#f1c40f;  /* need to fix hover and active css*/
+}
+
+.jumbotron {
+	font-size:			120%;
+	background-color: 	#ecf0f1;
+	padding:			40px;
+}
+
+.navbar-brand {
+	font-weight:		bold;
+	font-size:			25px;
+	font-family:		'Merriweather', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color:				#bdc3c7;
+}
+
+.navbar-light {
+
+}
+
+.navbar {
+	margin-bottom:		100px;
+	margin-top:			0px;
+	background-color:	#ecf0f1;
+	border:				#ecf0f1;
+}
+
+
+
+
+
+
+

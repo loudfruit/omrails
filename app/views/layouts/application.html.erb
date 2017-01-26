@@ -3,8 +3,8 @@
   <head>
     <title>Loudfruit</title>
     <%= csrf_meta_tags %>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<!--     <meta name="viewport" content="width=device-width, initial-scale=1">
+ -->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -12,29 +12,29 @@
   </head>
 
   <body>
+    <div class="container-fluid">
+      <!--  Navigation Bar -->
+    	<%= render "layouts/header" %>
 
-    <!--  Navigation Bar -->
-  	<%= render "layouts/header" %>
+      <!-- Flash Messages  -->
+      <% flash.each do |name, message| %>
+        <%= content_tag(:div, message, class: "alert alert-info #{name}") %>
+      <% end %>
 
-    <!-- Flash Messages  -->
-    <% flash.each do |name, message| %>
-      <%= content_tag(:div, message, class: "alert alert-info #{name}") %>
-    <% end %>
-
-    <!--  Page Content -->
-    <div class="container">
-    	<%= yield %>
-    </div>
-
-        <!-- Footer -->
-    <footer class="small text-muted">
+      <!--  Page Content -->
       <div class="container">
-        <hr>
-        <center>
-          <p>© 2017 Loudfruit</p>
-        </center>
+      	<%= yield %>
       </div>
-    </footer>
 
+          <!-- Footer -->
+      <footer class="small text-muted">
+        <div class="container">
+          <hr>
+          <center>
+            <p>© 2017 Loudfruit</p>
+          </center>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
