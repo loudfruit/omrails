@@ -1,22 +1,12 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather:400,700');
 
 
 body {
-    padding-top: 		5rem;
-    background-color: 	#ecf0f1;
-    font-family:		'Lato', 'Merriweather', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding-top: 		1rem;
 }
 
-h1 {
-	font-family:		'Merriweather', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-h2 {
-	font-family:		'Merriweather', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
 
 .center {
 	text-align: 		center;
@@ -31,49 +21,31 @@ h2 {
 
 }
 
-.btn-primary {
-	color: 				#fff;
-	background-color: 	#e67e22;
-	border-color: 		#e67e22;
-}
 
 .btn-outline-info {
 	border-color:		#ecf0f1;
 }
 
 
-// .btn-info {
-// 	background-color:	default;
-// 	border-color: 		default;
-// }
-
-
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
     color: 				#fff;
     background-color:	#d35400;
-    border-color: 		#d35400; /*set the color you want here*/
+    border-color: 		#d35400; 
 }
 
-.navbar-brand:hover, .navbar-brand:focus, .navbar-brand:active, .navbar-brand.active, .open>.dropdown-toggle.navbar-brand {
-    color: 				#f1c40f;  /* need to fix hover and active css*/
+.btn-outline-info:hover, .btn-outline-info:focus, .btn-outline-info:active, .btn-outline-info.active, .open>.dropdown-toggle.btn-outline-info {
+    color: 				#fff;
+    background-color:	#95A5A6;
+    border-color: 		#95A5A6; 
 }
 
-.jumbotron {
-	font-size:			120%;
-	background-color: 	#ecf0f1;
-	padding:			40px;
-}
 
 .navbar-brand {
+	color:				inherit;
 	font-weight:		bold;
-	font-size:			25px;
-	font-family:		'Merriweather', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color:				#bdc3c7;
+	font-size:			30px;
 }
 
-.navbar-light {
-
-}
 
 .navbar {
 	background-color:	#ecf0f1;
