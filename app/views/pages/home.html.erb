@@ -1,4 +1,3 @@
-<title>Loudfruit</title>
 <div class="jumbotron center">
 	<div class="container">
 		<% if user_signed_in? %>
@@ -15,7 +14,7 @@
 				</ul>
 			</div>
 			<h3>Are you ready to stand out from the crowd?</h3> <!-- <a href="https://loudfruit.com" class="btn btn-primary btn-lg" >Hell Yeah! >></a> -->
-				<%= link_to "Hell Yeah! >>>", new_user_session_path, class: "btn btn-primary btn-lg" %>
+				<%= link_to "Hell Yeah! >>>", signup_path, class: "btn btn-primary btn-lg" %>
 				<a href="https://www.facebook.com" class="btn btn-info btn-lg" >Nope</a></h3>
 		<% end %>
 		
