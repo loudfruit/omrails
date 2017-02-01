@@ -11,5 +11,8 @@ module Omrails
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+  
+  	# This code is here because we are using the gem 'inherited_resources' which replaces the scaffold_controller
+    config.app_generators.scaffold_controller = :scaffold_controller
   end
 end
