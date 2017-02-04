@@ -2,7 +2,7 @@
 
   <h1>Tweets</h1>
 
-  <table class="table">
+  <table class="table table-bordered table-inverse">
     <thead class="thead-inverse">
       <tr>
         <th>User</th>
@@ -22,8 +22,14 @@
             <td><%= link_to 'Delete', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
         </tr>
+
+
       <% end %>
+
+
     </tbody>
+    
+
   </table>
 
   <br>
