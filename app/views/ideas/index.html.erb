@@ -1,31 +1,38 @@
 <div class="container">
 
-  <h1>Ideas</h1>
-    <table class="table table-bordered table-inverse">
+  <h1>SWOT for Workshop Portal</h1>
+    <table class="table table-bordered table-striped">
       <thead class="thead-inverse">
       <tr>
-        <th>User</th>
-        <th>Topic</th>
-        <th>Method</th>
-        <th>Category</th>
-        <th>Element</th>
+        <th>Strength</th>
+        <th>Weakness</th>
+        <th>Opportunity</th>
+        <th>Threat</th>
         <th>Action</th>
-        <th>Tag</th>
-        <th colspan="3"></th>
+        <th colspan="2"></th>
       </tr>
     </thead>
 
     <tbody>
       <% @ideas.each do |idea| %>
         <tr>
-          <td><%= idea.user.email %></td>
-          <td><%= idea.topic %></td>
-          <td><%= idea.method %></td>
-          <td><%= idea.category %></td>
-          <td><%= idea.element %></td>
+          <td>
+          <% if idea.category == "Strength" %><%= idea.element  %>
+          <% end %>
+          </td>
+          <td>
+          <% if idea.category == "Weakness" %><%= idea.element  %>
+          <% end %>
+          </td>
+          <td>
+          <% if idea.category == "Opportunity" %><%= idea.element  %>
+          <% end %>
+          </td>
+          <td>
+          <% if idea.category == "Threat" %><%= idea.element  %>
+          <% end %>
+          </td>
           <td><%= idea.action %></td>
-          <td><%= idea.tag %></td>
-          <td><%= link_to 'Show', idea %></td>
           <% if idea.user == current_user %>
             <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
             <td><%= link_to 'Delete', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
