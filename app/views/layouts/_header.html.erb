@@ -18,10 +18,10 @@
       <ul class="nav navbar-nav"
         <!-- Login Buttons -->
         <% if user_signed_in? %>
-          <li class="nav-item pull-md-right"><%= link_to "Log out", signout_path, method: :delete, class: "nav-link btn btn-info btn-sm" %></li>  
+          <li class="nav-item pull-md-right"><%= link_to "Log out", signout_path, method: :delete, class: "btn btn-info" %></li>  
         <% else %>
-          <li class="nav-item pull-md-right"><%= link_to "Sign in", signin_path, class: "nav-link btn btn-outline-info" %></li> 
-          <li class="nav-item pull-md-right"><%= link_to "Sign up", signup_path, class: "nav-link btn btn-info text-white"%></li>
+          <li class="nav-item pull-md-right"><%= link_to "Sign in", signin_path, class: "btn btn-outline-info" %></li> 
+          <li class="pull-md-right"><%= link_to "Sign up", signup_path, class: "btn btn-info text-white"%></li>
         <% end %>
       </ul>
 

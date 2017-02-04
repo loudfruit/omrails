@@ -26,6 +26,9 @@
 
   <br>
 
-  <%= link_to 'New Tweet', new_tweet_path %>
+<!-- Only show link to create new tweet if logged in -->
+  <% if user_signed_in? %>
+    <%= link_to 'New Tweet', new_tweet_path %>
+  <% end %>
 
 </div>
