@@ -26,7 +26,7 @@ class IdeasController < ApplicationController
   def create
   @idea = current_user.ideas.new(idea_params)
     if @idea.save
-      redirect_to @idea, notice: 'Idea was successfully created.'
+      redirect_to ideas_url, notice: 'Idea was successfully created.'
     else
       render :new
     end
@@ -36,7 +36,7 @@ class IdeasController < ApplicationController
   def update
     @idea = current_user.ideas.find(params[:id])
     if @idea.update(idea_params)
-      redirect_to @idea, notice: 'Idea was successfully updated.'
+      redirect_to ideas_url, notice: 'Idea was successfully updated.'
     else
       render :edit
     end
