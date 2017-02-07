@@ -1,42 +1,43 @@
-<div class="container">
+<div class="tweet_container">
 
-  <h1>Tweets</h1>
+  <div class="row">
 
-  <table class="table table-bordered table-inverse">
-    <thead class="thead-inverse">
-      <tr>
-        <th>User</th>
-        <th>Content</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
+    <div class="col-md-3">
 
-    <tbody>
-      <% @tweets.each do |tweet| %>
-        <tr>
-          <td><%= tweet.user.email %></td>
-          <td><%= tweet.content %></td>
-          <td><%= link_to 'Show', tweet %></td>
-          <% if tweet.user == current_user %>
-            <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
-            <td><%= link_to 'Delete', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <% end %>
-        </tr>
-
-
-      <% end %>
-
-
-    </tbody>
     
 
-  </table>
+      <div class="card container">
+      <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">Your Profile</h4>
+          <p class="card-text">Profile text</p>
+          <p class="card-text"><%= current_user.email %></p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
 
-  <br>
+    </div>
 
-<!-- Only show link to create new tweet if logged in -->
-  <% if user_signed_in? %>
-    <%= link_to 'New Tweet', new_tweet_path %>
-  <% end %>
+    <div class="col-md-9 container">
+      
+      <div class="container">
+        <% if user_signed_in? %>
+          <%= link_to 'What\'s happening? ', new_tweet_path %>
+        <% end %>
+      </div>
 
+      <ul class="list-group">
+        <% @tweets.each do |tweet| %>
+            <%= link_to tweet, class: "list-group-item list-group-item-action" do %>
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-2"><%= tweet.user.email %></h5>
+              </div>
+              <p class="mb-2"><%= tweet.content %></p>
+              <p class="list-group-item-text">
+              </p>
+            <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 </div>

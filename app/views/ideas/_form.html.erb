@@ -13,12 +13,12 @@
 
   <div class="form-group">
     <%= f.label :topic %>
-    <%= f.text_area :topic, class: "form-control" %>
+    <%= f.text_field :topic, class: "form-control" %>
   </div>
 
   <div class="form-group">
     <%= f.label "Select method to use" %>
-    <select <%= f.text_area :method, class: "custom-select form-control" %> >
+    <select <%= f.text_field :method, class: "custom-select form-control" %> >
       <option selected>Select Analysis Method</option>
       <option value="SWOT">SWOT</option>
       <option value="PESTLE">PESTLE</option>
@@ -30,7 +30,7 @@
 
   <div class="form-group">
     <%= f.label "Select category of idea" %>
-    <select <%= f.text_area :category, class: "custom-select form-control" %> >
+    <select <%= f.text_field :category, class: "custom-select form-control" %> >
       <option selected>Select Category</option>
       <option value="Strength">Strength</option>
       <option value="Weakness">Weakness</option>

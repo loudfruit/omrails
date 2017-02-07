@@ -3,6 +3,7 @@ class IdeasController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   # GET /ideas
+
   def index
     @ideas = Idea.all
   end
@@ -25,6 +26,7 @@ class IdeasController < ApplicationController
   # POST /ideas
   def create
   @idea = current_user.ideas.new(idea_params)
+
     if @idea.save
       redirect_to ideas_url, notice: 'Idea was successfully created.'
     else
