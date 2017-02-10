@@ -6,7 +6,7 @@ class IdeasController < ApplicationController
 
   def index
     @ideas = Idea.all
-  #  @tweets = Tweet.all
+    # @tweets = Tweet.all
   end
 
   # GET /ideas/1

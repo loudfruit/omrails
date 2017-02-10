@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
-  get 'users/:username', to:'users#show', as: 'user'
+  # get 'users/:username', to:'users#show', as: 'user'
+  # get 'tweets', to: 'ideas#index'
 
+  resources :users, only: :show, param: :username do
+    member do
+      post 'follow', to: 'follows#create'
+      delete 'unfollow', to: "follows#destroy"
+    end
+  end
   resources :ideas
   resources :tweets
   ActiveAdmin.routes(self)
