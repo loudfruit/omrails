@@ -26,6 +26,9 @@
               <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-2"><%= tweet.user.name %></h5>
               </div>
+              <% if tweet.image.present? %>
+                <center><%= image_tag @tweet.image %></center>
+              <% end %>
               <p class="mb-2"><%= tweet.content %></p>
               <p class="list-group-item-text">
               </p>
