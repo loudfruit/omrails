@@ -27,7 +27,7 @@
                 <h5 class="mb-2"><%= tweet.user.name %></h5>
               </div>
               <% if tweet.image.present? %>
-                <center><%= image_tag @tweet.image %></center>
+                <center><%= image_tag @tweet.image class: 'img-fluid'%></center>
               <% end %>
               <p class="mb-2"><%= tweet.content %></p>
               <p class="list-group-item-text">
