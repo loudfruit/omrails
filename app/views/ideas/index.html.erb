@@ -4,18 +4,20 @@
     <table class="table table-bordered table-inverse table-hover">
       <thead class="thead-inverse">
       <tr>
+        <th>Votes</th>
         <th>Strength</th>
         <th>Weakness</th>
         <th>Opportunity</th>
         <th>Threat</th>
         <th>Action</th>
-        <th colspan="2"></th>
+        <th colspan="4"></th>
       </tr>
     </thead>
 
     <tbody>
       <% @ideas.each do |idea| %>
         <tr>
+          <td><%= idea.votes_for.up.size %></td>
           <td>
           <% if idea.category == "Strength" %><%= idea.element  %>
           <% end %>
@@ -33,9 +35,16 @@
           <% end %>
           </td>
           <td><%= idea.action %></td>
-          <% if idea.user == current_user %>
-            <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
-            <td><%= link_to 'Delete', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% if user_signed_in? %>
+            <% if current_user.voted_up_on? idea %>
+              <td><%= link_to 'Unvote', unvote_idea_path(idea), method: :delete %></td>
+            <% else %>
+              <td><%= link_to 'Vote', vote_idea_path(idea), method: :post %></td>
+            <% end %>
+            <% if idea.user == current_user %>
+              <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
+              <td><%= link_to 'Delete', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
           <% end %>
         </tr>
       <% end %>
