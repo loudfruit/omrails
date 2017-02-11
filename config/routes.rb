@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  # get 'users/:username', to:'users#show', as: 'user'
-  # get 'tweets', to: 'ideas#index'
+  ActiveAdmin.routes(self)
+  devise_for :users
+  as :user do
+    get "signin", to: 'devise/sessions#new'
+    delete "signout", to: 'devise/sessions#destroy'
+    get "signup", to: 'devise/registrations#new'
+  end
 
   get 'feed', to: 'feed#show'
 
@@ -12,13 +17,6 @@ Rails.application.routes.draw do
   end
   resources :ideas
   resources :tweets
-  ActiveAdmin.routes(self)
-  devise_for :users
-  as :user do
-  	get "signin", to: 'devise/sessions#new'
-  	delete "signout", to: 'devise/sessions#destroy'
-  	get "signup", to: 'devise/registrations#new'
-  end
 	# defines path structure for application
   root 'pages#home'
   get 'about', to: 'pages#about'
